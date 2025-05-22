@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# TP02 - Application de gestion d'annonces
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application web de gestion d'annonces, réalisée avec React. Elle permet aux utilisateurs de s'inscrire, se connecter, publier des annonces, les modifier, les supprimer, et de consulter celles des autres. L'accès aux fonctionnalités dépend de l'authentification de l'utilisateur.
 
-## Available Scripts
+## Fonctionnalités principales
 
-In the project directory, you can run:
+- **Inscription et connexion** des utilisateurs avec gestion de jeton JWT.
+- **Création, modification et suppression** d'annonces (titre, description, prix, image, catégories).
+- **Filtrage et recherche** des annonces par mot-clé et catégorie.
+- **Affichage détaillé** d'une annonce.
+- **Gestion du profil utilisateur** (affichage, suppression du compte, déconnexion).
+- **Routes protégées** pour sécuriser l'accès aux pages selon l'état de connexion.
 
-### `npm start`
+## Structure du projet
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `src/Components/Login` : Formulaire de connexion.
+- `src/Components/Register` : Formulaire d'inscription.
+- `src/Components/Home` : Page principale listant les annonces et permettant leur gestion.
+- `src/Components/ProtectedRoute` : Composant pour protéger les routes nécessitant une authentification.
+- `src/Components/PublicOnlyRoute` : Composant pour empêcher l'accès aux pages publiques si déjà connecté.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Démarrage rapide
 
-### `npm test`
+1. **Installer les dépendances**  
+   Dans le dossier du projet, exécute :
+   ```sh
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Lancer l'application**  
+   ```sh
+   npm start
+   ```
+   L'application sera accessible sur [http://localhost:3000](http://localhost:3000).
 
-### `npm run build`
+3. **Connexion au backend**  
+   L'application nécessite un backend Node.js (API REST) accessible sur `http://localhost:8080`.  
+   Assure-toi que le serveur backend est démarré et configuré pour gérer les routes `/users` et `/publication`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Utilisation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Créer un compte** via la page d'inscription.
+- **Se connecter** pour accéder à la gestion des annonces.
+- **Ajouter, modifier ou supprimer** tes propres annonces.
+- **Consulter** les annonces des autres utilisateurs.
+- **Filtrer** les annonces par catégorie ou rechercher par mot-clé.
+- **Gérer ton profil** via le bouton "Mon compte".
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies utilisées
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React 19
+- React Router DOM 7
+- Axios
+- CSS (custom)
+- Font Awesome
