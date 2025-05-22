@@ -1,38 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #f4f6fb;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.profile-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+.profile-btn:hover {
+  background: #1565c0;
+}
+
+.plus-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.2);
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.2s;
+}
+.plus-btn:hover {
+  background: #1565c0;
 }
 
-.App-link {
-  color: #61dafb;
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.popup-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  position: relative;
+}
+.close-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.publication-list {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+.publication-list li {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.publication-list img {
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
