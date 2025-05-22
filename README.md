@@ -1,4 +1,4 @@
-# TP02 - Application de gestion d'annonces
+# TP - Application de gestion d'annonces
 
 Ce projet est une application web de gestion d'annonces, réalisée avec React. Elle permet aux utilisateurs de s'inscrire, se connecter, publier des annonces, les modifier, les supprimer, et de consulter celles des autres. L'accès aux fonctionnalités dépend de l'authentification de l'utilisateur.
 
